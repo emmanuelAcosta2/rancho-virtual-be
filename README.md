@@ -1,73 +1,55 @@
-<p align="center">
-  <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="200" alt="Nest Logo" /></a>
-</p>
+# Arquitectura del Proyecto
 
-[circleci-image]: https://img.shields.io/circleci/build/github/nestjs/nest/master?token=abc123def456
-[circleci-url]: https://circleci.com/gh/nestjs/nest
+## Descripción
+Este proyecto consiste en una aplicación web implementada mediante contenedores Docker, administrada por Kubernetes, y desplegada en Microsoft Azure, AWS o Digital Ocean. La aplicación se compone de un frontend en React, un backend en NestJS y utiliza una base de datos MongoDB para gestionar entidades como Establecimiento, Animal, Usuario, Potrero, Reportes, etc. También se incluyen funcionalidades de CI/CD con GitHub Actions, análisis estático de código con SonarQube, pruebas unitarias con Jest y el uso del paquete registry de GitHub para la gestión de librerías. 
 
-  <p align="center">A progressive <a href="http://nodejs.org" target="_blank">Node.js</a> framework for building efficient and scalable server-side applications.</p>
-    <p align="center">
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/v/@nestjs/core.svg" alt="NPM Version" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/l/@nestjs/core.svg" alt="Package License" /></a>
-<a href="https://www.npmjs.com/~nestjscore" target="_blank"><img src="https://img.shields.io/npm/dm/@nestjs/common.svg" alt="NPM Downloads" /></a>
-<a href="https://circleci.com/gh/nestjs/nest" target="_blank"><img src="https://img.shields.io/circleci/build/github/nestjs/nest/master" alt="CircleCI" /></a>
-<a href="https://coveralls.io/github/nestjs/nest?branch=master" target="_blank"><img src="https://coveralls.io/repos/github/nestjs/nest/badge.svg?branch=master#9" alt="Coverage" /></a>
-<a href="https://discord.gg/G7Qnnhy" target="_blank"><img src="https://img.shields.io/badge/discord-online-brightgreen.svg" alt="Discord"/></a>
-<a href="https://opencollective.com/nest#backer" target="_blank"><img src="https://opencollective.com/nest/backers/badge.svg" alt="Backers on Open Collective" /></a>
-<a href="https://opencollective.com/nest#sponsor" target="_blank"><img src="https://opencollective.com/nest/sponsors/badge.svg" alt="Sponsors on Open Collective" /></a>
-  <a href="https://paypal.me/kamilmysliwiec" target="_blank"><img src="https://img.shields.io/badge/Donate-PayPal-ff3f59.svg"/></a>
-    <a href="https://opencollective.com/nest#sponsor"  target="_blank"><img src="https://img.shields.io/badge/Support%20us-Open%20Collective-41B883.svg" alt="Support us"></a>
-  <a href="https://twitter.com/nestframework" target="_blank"><img src="https://img.shields.io/twitter/follow/nestframework.svg?style=social&label=Follow"></a>
-</p>
-  <!--[![Backers on Open Collective](https://opencollective.com/nest/backers/badge.svg)](https://opencollective.com/nest#backer)
-  [![Sponsors on Open Collective](https://opencollective.com/nest/sponsors/badge.svg)](https://opencollective.com/nest#sponsor)-->
+## Componentes
+- Frontend: React
+- Backend: NestJS
+- Base de Datos: MongoDB
+- Entidades: Establecimiento, Animal, Usuario, Potrero, Reportes, etc.
 
-## Description
+## Kubernetes
+La aplicación será administrada por Kubernetes para garantizar la escalabilidad y la disponibilidad.
 
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+## CI/CD
+Se implementará CI/CD utilizando GitHub Actions para automatizar el proceso de construcción, pruebas y despliegue.
 
-## Installation
+## Análisis Estático de Código
+Se utilizará SonarQube para realizar análisis estático de código y asegurar la calidad del mismo.
 
-```bash
-$ npm install
-```
+## Pruebas Unitarias
+Las pruebas unitarias serán realizadas con Jest para asegurar el funcionamiento correcto de los componentes.
 
-## Running the app
+## Gestión de Módulos
+La aplicación incluirá módulos de gestión de animales, reportes, compra-venta de animales, ABM de usuarios, etc.
 
-```bash
-# development
-$ npm run start
+## Package Registry
+GitHub Package Registry será utilizado para gestionar las librerías y paquetes utilizados en el proyecto.
 
-# watch mode
-$ npm run start:dev
+## Plataformas de Despliegue
+El proyecto se desplegará en una de las siguientes plataformas de nube:
+- Microsoft Azure
+- AWS
+- Digital Ocean
 
-# production mode
-$ npm run start:prod
-```
+## Instrucciones de Ejecución
+1. Clonar el repositorio desde GitHub.
+2. Navegar a la carpeta del proyecto.
+3. Configurar las variables de entorno necesarias para la conexión a la base de datos y otras configuraciones.
+4. Construir y desplegar los contenedores Docker utilizando Kubernetes.
+5. Acceder a la aplicación desde la URL proporcionada por la plataforma de despliegue.
 
-## Test
+## Configuración
+A continuación, se detallan las configuraciones necesarias:
 
-```bash
-# unit tests
-$ npm run test
+### Variables de Entorno
+- `DB_CONNECTION_STRING`: Cadena de conexión a la base de datos MongoDB.
+- `API_KEY`: Clave de API para acceder a servicios externos (si es necesario).
 
-# e2e tests
-$ npm run test:e2e
-
-# test coverage
-$ npm run test:cov
-```
-
-## Support
-
-Nest is an MIT-licensed open source project. It can grow thanks to the sponsors and support by the amazing backers. If you'd like to join them, please [read more here](https://docs.nestjs.com/support).
-
-## Stay in touch
-
-- Author - [Kamil Myśliwiec](https://kamilmysliwiec.com)
-- Website - [https://nestjs.com](https://nestjs.com/)
-- Twitter - [@nestframework](https://twitter.com/nestframework)
-
-## License
-
-Nest is [MIT licensed](LICENSE).
+## Contribución
+Si deseas contribuir al proyecto, sigue los siguientes pasos:
+1. Haz un fork del repositorio.
+2. Crea una rama para tu contribución.
+3. Realiza los cambios y las mejoras necesarias.
+4. Envía un pull request al repositorio principal.
