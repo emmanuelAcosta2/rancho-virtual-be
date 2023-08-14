@@ -52,3 +52,4 @@ A continuación, se detallan las configuraciones necesarias:
 ### Variables de Entorno
 - `DB_CONNECTION_STRING`: Cadena de conexión a la base de datos MongoDB.
 - `API_KEY`: Clave de API para acceder a servicios externos (si es necesario).
+# kustomize-rancho
